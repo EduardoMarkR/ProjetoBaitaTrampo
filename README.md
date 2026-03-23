@@ -1,4 +1,4 @@
-# 🚀 HireFlow
+# 🚀 HirePulse
 
 ### Plataforma de Automação de Recrutamento via WhatsApp
 
@@ -8,7 +8,7 @@
 
 ## 📌 Sobre o Produto
 
-O **HireFlow** é uma plataforma de automação de recrutamento desenvolvida para otimizar a comunicação entre empresas e candidatos, utilizando o **WhatsApp como canal principal**.
+O **HirePulse** é uma plataforma de automação de recrutamento desenvolvida para otimizar a comunicação entre empresas e candidatos, utilizando o **WhatsApp como canal principal**.
 
 A solução elimina processos manuais, acelera contratações e aumenta significativamente a taxa de resposta.
 
@@ -38,7 +38,7 @@ Empresas que trabalham com vagas operacionais enfrentam:
 
 ## 💡 Solução
 
-O HireFlow automatiza todo o fluxo de recrutamento:
+O HirePulse automatiza todo o fluxo de recrutamento:
 
 * 📥 Captação de candidatos via formulário
 * 🧠 Organização inteligente dos dados
@@ -50,7 +50,7 @@ O HireFlow automatiza todo o fluxo de recrutamento:
 
 ## 🧱 Arquitetura
 
-```mermaid id="m3zkc9"
+```mermaid id="x91k2v"
 flowchart LR
 A[Google Forms] --> B[Google Sheets]
 B --> C[Apps Script / Botão de Disparo]
@@ -194,7 +194,7 @@ Esse modelo garante maior controle operacional sobre o momento do disparo.
 
 ## ⚙️ Operação do Sistema
 
-O HireFlow já está configurado e operacional.
+O HirePulse já está configurado e operacional.
 
 O fluxo de utilização ocorre da seguinte forma:
 
@@ -259,7 +259,7 @@ As informações são refletidas automaticamente na base de dados.
 ## 👤 Autor
 
 Sistema desenvolvido por **Mark (Eduardo)**
-Criador do HireFlow
+Criador do HirePulse
 
 ---
 
