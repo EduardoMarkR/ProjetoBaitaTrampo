@@ -1,4 +1,4 @@
-# 🚀 Proposta Comercial — HirePulse
+# 🚀 HirePulse
 
 **Cliente:** [Nome da empresa]
 **Data:** [Data de envio]
