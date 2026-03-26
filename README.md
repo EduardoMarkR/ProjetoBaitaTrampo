@@ -1,74 +1,54 @@
-# 🚀 HirePulse
+# 🚀 Projeto BaitaTrampo
 
-### Plataforma de Alocação de Freelancers Sob Demanda via WhatsApp
+### Automação de Alocação de Freelancers via WhatsApp
 
-> Conectando empresas e trabalhadores em tempo real, com automação inteligente e alta velocidade de resposta.
-
----
-
-## 📌 Sobre o Produto
-
-O **HirePulse** é uma plataforma de **alocação de freelancers sob demanda**, desenvolvida para conectar empresas a trabalhadores disponíveis de forma rápida, automatizada e escalável.
-
-Utilizando o **WhatsApp como principal canal de comunicação**, o sistema permite distribuir vagas, coletar respostas e organizar contratações em tempo real.
+> Projeto desenvolvido durante o bootcamp da GrowDev, com foco em automação de processos e integração de sistemas.
 
 ---
 
-## 🧩 Caso de Uso
+## 📌 Sobre o Projeto
 
-O HirePulse foi implementado na operação da **BaitaTrampo**, uma empresa que atua na intermediação de freelancers para restaurantes.
+Este projeto foi desenvolvido como parte do bootcamp da **GrowDev**, com o objetivo de criar uma solução prática para automatizar o processo de alocação de freelancers em vagas operacionais.
 
-Com o sistema, a operação passou a:
-
-* Automatizar o envio de vagas
-* Aumentar a velocidade de resposta dos candidatos
-* Organizar a base de trabalhadores
-* Reduzir esforço manual na alocação
+A solução foi construída em parceria com a empresa **BaitaTrampo**, que atua na intermediação de trabalhadores freelancers para restaurantes.
 
 ---
 
-## 🎯 Problema
+## 🎓 Contexto Acadêmico
 
-Empresas que trabalham com freelancers e vagas operacionais enfrentam:
+* 🏫 Bootcamp: GrowDev
+* 👨‍🏫 Mentor: Guilherme Pitsch
+* 👨‍💻 Desenvolvedor: Mark (Eduardo)
+* 🎯 Objetivo: Aplicar conceitos de automação, integração de APIs e lógica de negócios em um cenário real
 
-* Necessidade de contratação rápida
+---
+
+## 🧩 Problema
+
+Durante o levantamento com a empresa, foram identificados os seguintes desafios:
+
 * Alto volume de candidatos
-* Comunicação manual e descentralizada
-* Baixa taxa de resposta
-* Dificuldade em organizar disponibilidade
+* Processo manual de envio de vagas
+* Baixa escalabilidade da operação
+* Dificuldade em organizar respostas
+* Tempo elevado para preenchimento das vagas
 
 ---
 
-## 💡 Solução
+## 💡 Solução Desenvolvida
 
-O HirePulse automatiza todo o processo de alocação:
+Foi criada uma solução automatizada para:
 
-* 📥 Captação de freelancers via formulário
-* 🧠 Organização inteligente da base de dados
-* 📲 Distribuição automática de vagas via WhatsApp
-* ⚡ Coleta e processamento instantâneo de respostas
-* 📊 Atualização em tempo real do status dos candidatos
-
----
-
-## 🧠 Posicionamento
-
-O HirePulse atua como um:
-
-> **Sistema de alocação e distribuição de freelancers sob demanda**
-
-Diferente de soluções tradicionais de RH, o foco está em:
-
-* Velocidade
-* Volume
-* Automação
-* Resposta imediata
+* 📥 Receber e organizar dados de candidatos
+* 📲 Disparar vagas automaticamente via WhatsApp
+* ⚡ Processar respostas em tempo real
+* 📊 Atualizar o status dos candidatos de forma automática
 
 ---
 
-## 🧱 Arquitetura
+## 🧱 Arquitetura da Solução
 
-```mermaid
+```mermaid id="6p2j9s"
 flowchart LR
 A[Google Forms] --> B[Google Sheets]
 B --> C[Apps Script / Botão de Disparo]
@@ -82,34 +62,42 @@ D --> B
 
 ---
 
+## ⚙️ Tecnologias Utilizadas
+
+* Google Forms (entrada de dados)
+* Google Sheets (base de dados)
+* Google Apps Script (automação de disparo)
+* N8N (orquestração dos fluxos)
+* Evolution API (integração com WhatsApp)
+* Docker / Render (infraestrutura)
+
+---
+
 ## ⚙️ Funcionalidades
 
-### 🔹 Distribuição de Vagas
+### 🔹 Disparo Automatizado de Vagas
 
-* Disparo em massa para candidatos elegíveis
-* Comunicação direta via WhatsApp
-* Mensagens personalizadas
+* Envio em massa para candidatos elegíveis
+* Mensagens personalizadas via WhatsApp
 
-### 🔹 Matching em Tempo Real
-
-* Conexão entre vaga e candidato disponível
-* Filtro automático por elegibilidade
-* Resposta imediata dos trabalhadores
+---
 
 ### 🔹 Processamento de Respostas
 
 * Interpretação automática:
 
-  * `1` → Disponível / Interessado
-  * `2` → Não disponível
+  * `1` → Interessado
+  * `2` → Não interessado
   * `SAIR` → Opt-out
 * Atualização automática no sistema
 
-### 🔹 Gestão Operacional
+---
 
-* Controle de status dos candidatos
+### 🔹 Organização de Dados
+
 * Registro de interações
-* Organização centralizada no Google Sheets
+* Controle de status dos candidatos
+* Atualização em tempo real no Google Sheets
 
 ---
 
@@ -156,89 +144,92 @@ D --> B
 
 ## 🔄 Fluxos Automatizados
 
-### 📤 Distribuição de Vagas
+### 📤 Disparo de Vagas
 
-1. Disparo iniciado manualmente no Google Sheets
-2. Apps Script aciona o N8N
+1. Acionamento manual via botão no Google Sheets
+2. Apps Script envia requisição para o N8N
 3. Seleção de candidatos elegíveis
 4. Envio automatizado via WhatsApp
 5. Registro do envio
 
 ---
 
-### 📥 Respostas dos Candidatos
+### 📥 Recebimento de Respostas
 
-1. Recebimento via webhook
+1. Captura via webhook
 2. Normalização da resposta
 3. Classificação automática
 4. Atualização na base de dados
 
 ---
 
-## 🚀 Operação do Sistema
+## 🚀 Funcionamento
 
-O HirePulse já está configurado e operacional.
+### 1. Cadastro de candidatos
 
-### 1. Entrada de freelancers
-
-* Cadastro via Google Forms
-* Dados organizados automaticamente
+* Realizado via Google Forms
+* Dados enviados automaticamente para o Sheets
 
 ---
 
 ### 2. Cadastro de vagas
 
-* Inserção manual na base
+* Inserção manual na planilha
 * Sistema identifica candidatos elegíveis
 
 ---
 
 ### 3. Disparo
 
-* Clique no botão dentro do Google Sheets
-* Sistema inicia envio automaticamente
+* Realizado através de botão no Google Sheets
+* Integração com N8N e WhatsApp
 
 ---
 
 ### 4. Interação
 
-* Freelancers respondem via WhatsApp
-* Sistema interpreta automaticamente
+* Candidatos respondem via WhatsApp
+* Sistema processa automaticamente
 
 ---
 
 ### 5. Atualização
 
 * Dados atualizados em tempo real
-* Status e respostas registrados
+* Status registrados automaticamente
 
 ---
 
-## 🧪 Validação
+## 🧪 Testes
 
-* `1` → Disponível
-* `2` → Não disponível
+* `1` → Interessado
+* `2` → Não interessado
 * `SAIR` → Remoção da lista
 
 ---
 
-## 🧠 Diferenciais
+## 🧠 Resultados Obtidos
 
-* Alta velocidade de alocação
-* Comunicação direta via WhatsApp
-* Automação completa do processo
-* Redução de esforço operacional
-* Escalabilidade para alto volume
+* Redução do processo manual
+* Maior agilidade na comunicação
+* Melhor organização da base de candidatos
+* Maior escalabilidade da operação
 
 ---
 
 ## 👤 Autor
 
-Sistema desenvolvido por **Mark (Eduardo)**
-Criador do HirePulse
+Projeto desenvolvido por **Mark (Eduardo)**
+Durante o bootcamp da GrowDev
+
+---
+
+## 🙌 Agradecimentos
+
+Agradecimento especial ao mentor **Guilherme Pitsch** pelo suporte e orientação durante o desenvolvimento do projeto.
 
 ---
 
 ## 📄 Licença
 
-Propriedade intelectual do autor. Uso sob autorização.
+Projeto desenvolvido para fins educacionais.
